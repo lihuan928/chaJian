@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <link rel="icon" href="img/favicon.ico">
+	    <title>Bootstrap 模板</title>
+	    <!--
+        	描述：样式导入
+        -->
+	    <link rel="stylesheet" href="js/bootstrap_above/bootstrap/css/bootstrap.min.css" />
+	    <link rel="stylesheet" href="js/bootstrap_above/bootstrap-table-develop/dist/bootstrap-table.css"/>
+	    
+	    <!--
+        	描述：js导入，注意顺序，jquery必须引入
+        	bootstrap-table-zh-CN.js为表格汉化的文件
+        	FileSaver.min.js等是关联引用文件
+        -->
+	    <script src="js/bootstrap_above/jquery-1.9.1/jquery.min.js"></script>
+	    <script src="js/bootstrap_above/bootstrap/js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="js/bootstrap_above/bootstrap-table-develop/dist/bootstrap-table.js"></script>
+		<script type="text/javascript" src="js/bootstrap_above/bootstrap-table-develop/dist/locale/bootstrap-table-zh-CN.js"></script>
+		<script type="text/javascript" src="js/bootstrap_above/bootstrap-table-develop/dist/extensions/export/bootstrap-table-export.js"></script>
+
+	    <script src="js/bootstrap_above/tableExport/libs/pdfmake/pdfmake.min.js"></script>
+		<script src="js/bootstrap_above/tableExport/libs/pdfmake/vfs_fonts.js"></script>
+		<script type="text/javascript" src="js/bootstrap_above/tableExport/libs/FileSaver/FileSaver.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap_above/tableExport/libs/jsPDF/jspdf.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap_above/tableExport/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
+		<script type="text/javascript" src="js/bootstrap_above/tableExport/tableExport.js"></script>
+	    
+		<script src="js/table.js"></script>
+	</head>
+	<body>
+        <table class="table-responsive" id="db_dependences">
+            
+        </table>
+	</body>
+</html>

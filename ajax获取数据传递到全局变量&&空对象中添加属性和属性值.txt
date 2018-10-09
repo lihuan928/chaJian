@@ -1,0 +1,34 @@
+/* var ceshi = [];
+         $.ajax({
+             type: "POST",
+             url: "http://123.56.115.105:8080/jeesite/f/app/getRate",
+             async: false,
+             dataType: 'json',
+             data: {
+                 buildid: "83000006",
+                 signaltype: 1
+             },
+             success: function (msg) {
+                 for (var i = 0; i < msg.data.length; i++) {
+                     ceshi.push(msg.data[i].ratelte)
+                 }
+             }
+         });
+         console.log(ceshi)
+         var maxCeshi = Math.max.apply(null, ceshi);   //获取数组中的最大值
+         var minCeshi = Math.min.apply(null, ceshi)   //获取数组中的最小值
+         $.ajax({
+             type: "get",
+             url: "/Source/wlmq_3dtile/tileset.json",
+             async: true,
+             dataType: "json",
+             success: function (data) {
+                 var sss = data.properties.base_h;
+                 sss.minimum = minCeshi;
+                 sss.maximum = maxCeshi;
+                 console.log(sss);
+                 var xxx = data.properties.lbm;
+                 xxx['results'] = sss.minimum;
+                 console.log(xxx)
+             }
+         });*/

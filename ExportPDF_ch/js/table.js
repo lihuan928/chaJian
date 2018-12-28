@@ -39,4 +39,6 @@ $(function () {
 	        price: '价格$2'
 	    }]
 	});
+	//$('#db_dependences').bootstrapTable('showColumn', 'id');
+    $('#db_dependences').bootstrapTable('hideColumn', 'id');
 });

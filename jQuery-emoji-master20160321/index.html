@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery-emoji by eshengsky</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/css/jquery.mCustomScrollbar.min.css"/>
+    <link rel="stylesheet" href="dist/css/jquery.emoji.css"/>
+</head>
+<body>
+<div id="editor" contenteditable="true"></div>
+<button id="btn" class="btn btn-sm btn-default">:)</button>
+
+<script src="lib/script/jquery.min.js"></script>
+<script src="lib/script/jquery.mCustomScrollbar.min.js"></script>
+<script src="dist/js/jquery.emoji.min.js"></script>
+<script>
+
+   $("#editor").emoji({
+       button: "#btn",
+       showTab: false,
+       animation: 'slide',
+       icons: [{
+           name: "QQ表情",
+           path: "dist/img/qq/",
+           maxNum: 91,
+           excludeNums: [41, 45, 54],
+           file: ".gif"
+       }]
+   });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://www.17sucai.com/preview/1/2017-08-09/jQueryYdxz/index.html -->
+<html data-dpr="2" class="ios hairline" style="font-size: 50px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>CitySelect</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="./css/ydui.css">
+    <link rel="stylesheet" href="./css/demo.css">
+</head>
+<body style="">
+
+<section class="g-flexview">
+
+    
+
+    <section class="g-scrollview">
+        <div class="m-celltitle">默认调用</div>
+        <div class="m-cell">
+            <div class="cell-item">
+                <div class="cell-left">所在地区：</div>
+                <div class="cell-right cell-arrow">
+                    <input type="text" class="cell-input" readonly="" id="J_Address" placeholder="请选择收货地址">
+                </div>
+            </div>
+        </div>
+
+        <div class="m-celltitle">设置默认值</div>
+        <div class="m-cell">
+            <div class="cell-item">
+                <div class="cell-left">所在地区：</div>
+                <div class="cell-right cell-arrow">
+                    <input type="text" class="cell-input" readonly="" id="J_Address2" value="新疆 乌鲁木齐市 天山区" placeholder="请选择收货地址">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</section>
+<script src="js/flexible.min.js"></script>
+<script src="js/jquery.1.11.3.min.js"></script>
+<script type="text/javascript" src="./js/ydui.citys.js"></script>
+<script type="text/javascript" src="./js/ydui.js"></script>
+<script type="text/javascript">
+/**
+ * 默认调用
+ */
+!function () {
+	var $target = $('#J_Address');
+
+	$target.citySelect();
+
+	$target.on('click', function (event) {
+		event.stopPropagation();
+		$target.citySelect('open');
+	});
+
+	$target.on('done.ydui.cityselect', function (ret) {
+		$(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
+	});
+}();
+/**
+ * 设置默认值
+ */
+!function () {
+	var $target = $('#J_Address2');
+
+	$target.citySelect({
+		provance: '新疆',
+		city: '乌鲁木齐市',
+		area: '天山区'
+	});
+
+	$target.on('click', function (event) {
+		event.stopPropagation();
+		$target.citySelect('open');
+	});
+
+	$target.on('done.ydui.cityselect', function (ret) {
+		$(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
+	});
+}();
+</script><div class="m-cityselect">    <div class="cityselect-header">        <p class="cityselect-title">所在地区</p>        <div class="cityselect-nav">            <a href="javascript:;" class=""></a>            <a href="javascript:;" class=""></a>            <a href="javascript:;" class=""></a>        </div>    </div>    <ul class="cityselect-content cityselect-next">        <li class="cityselect-item">            <div class="cityselect-item-box"></div>        </li>        <li class="cityselect-item">            <div class="cityselect-item-box"></div>        </li>        <li class="cityselect-item">            <div class="cityselect-item-box"></div>        </li>    </ul></div><div class="m-cityselect">    <div class="cityselect-header">        <p class="cityselect-title">所在地区</p>        <div class="cityselect-nav">            <a href="javascript:;" class=""></a>            <a href="javascript:;" class=""></a>            <a href="javascript:;" class=""></a>        </div>    </div>    <ul class="cityselect-content cityselect-move-animate cityselect-prev">        <li class="cityselect-item">            <div class="cityselect-item-box"></div>        </li>        <li class="cityselect-item">            <div class="cityselect-item-box"></div>        </li>        <li class="cityselect-item">            <div class="cityselect-item-box"></div>        </li>    </ul></div>
+
+
+
+<div id="cli_dialog_div"></div></body></html>
